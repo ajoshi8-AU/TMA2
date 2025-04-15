@@ -3,10 +3,12 @@ $host = 'tmamysqlserver.mysql.database.azure.com';
 $user = 'server_admin@tmamysqlserver';
 $password = 'login_TMA2';
 $database = 'bookmark_db';
+$ssl_cert = __DIR__ . '/../DigiCertGlobalRootG2.crt.pem';
 
-$conn = new mysqli($host, $user, $password, $database);
+$conn = mysqli_init();
+mysqli_ssl_set($conn, NULL, NULL, $ssl_cert, NULL, NULL);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!mysqli_real_connect($conn, $host, $user, $password, $database, 3306, NULL, MYSQLI_CLIENT_SSL)) {
+    die('Connection failed: ' . mysqli_connect_error());
 }
 ?>
