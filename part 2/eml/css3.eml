@@ -1,0 +1,27 @@
+<h>Introduction to CSS3</h>
+<p>CSS3 is the latest standard for styling web pages, building upon CSS2 with new modules and features [3, 5, 10]. It allows for more sophisticated and visually appealing designs.</p>
+<h>Key Features of CSS3</h>
+<ul>
+    <li><important>Selectors</important>: More powerful ways to target HTML elements.</li>
+    <li><important>Box Model</important>: Enhancements like `box-sizing`.</li>
+    <li><important>Backgrounds and Borders</important>: Rounded corners, shadows, and more.</li>
+    <li><important>Text Effects</important>: Shadows and other text manipulations.</li>
+    <li><important>Transitions and Animations</important>: Creating dynamic visual effects.</li>
+    <li><important>Transforms</important>: Rotating, scaling, skewing elements.</li>
+    <li><important>Layout Modules</important>: Flexbox and Grid for advanced layouts.</li>
+    <li><important>Media Queries</important>: Applying different styles for different screen sizes [10].</li>
+</ul>
+<p>Example of CSS3 rounded corners:</p>
+<code>
+    .rounded-box {
+        border-radius: 10px;
+    }
+</code>
+<p>Example of a media query:</p>
+<code>
+    @media (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+    }
+</code>
