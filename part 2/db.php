@@ -1,6 +1,6 @@
 <?php
 $host = 'tmamysqlserver.mysql.database.azure.com';
-$user = 'server_admin@tmamysqlserver';
+$user = 'server_admin';
 $password = 'login_TMA2';
 $database = 'lms_db';
 $ssl_cert = __DIR__ . '/../DigiCertGlobalRootG2.crt.pem';
