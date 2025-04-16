@@ -5,10 +5,10 @@ $password = 'login_TMA2';
 $database = 'lms_db';
 $ssl_cert ='/../DigiCertGlobalRootG2.crt.pem';
 
-$conn = mysqli_init();
-mysqli_ssl_set($conn, NULL, NULL, $ssl_cert, NULL, NULL);
+$conn = new mysqli($host, $user, $password, $database);
 
-if (!mysqli_real_connect($conn, $host, $user, $password, $database, 3306, NULL, MYSQLI_CLIENT_SSL)) {
-    die('Connection failed: ' . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+?>
 ?>
