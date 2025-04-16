@@ -3,7 +3,7 @@ $host = 'tmamysqlserver.mysql.database.azure.com';
 $user = 'server_admin';
 $password = 'login_TMA2';
 $database = 'lms_db';
-$ssl_cert = __DIR__ . '/../DigiCertGlobalRootG2.crt.pem';
+$ssl_cert ='/../DigiCertGlobalRootG2.crt.pem';
 
 $conn = mysqli_init();
 mysqli_ssl_set($conn, NULL, NULL, $ssl_cert, NULL, NULL);
