@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TMA2 - Advanced Web Development</title>
+</head>
+<body>
+    <header>
+        <h1>Assignment 2 - COMP 466: Advanced Web Development</h1>
+        <p><strong>Student Name:</strong> Anjali Joshi</p>
+        <p><strong>Student ID:</strong> 3645817</p>
+        <p><strong>Date Started:</strong> February 15th 2025</p>
+        <p><strong>Date Completed:</strong> March 7th 2025</p>
+        <p><strong>Estimated Hours:</strong> 45 hours</p>
+    </header>
+
+    <section>
+        <h2>Project 1: Online Bookmarking Application</h2>
+        <p>This web application enables users to manage their personal list of bookmarked websites. Features include secure user authentication, URL validation, and database-driven bookmark storage.</p>
+        
+        <h3>Analysis & Design</h3>
+        <ul>
+            <li>User registration and login with session handling</li>
+            <li>Bookmark CRUD operations (Create, Read, Update, Delete)</li>
+            <li>Top 10 most popular bookmarks displayed on the welcome page</li>
+            <li>Client-side JavaScript validation to ensure valid, active URLs</li>
+            <li>Consistent user interface across all pages</li>
+        </ul>
+
+        <h3>Implementation</h3>
+        <ul>
+            <li>PHP handles session management, form processing, and database interaction</li>
+            <li>MySQL (`bookmark_db`) stores users and bookmarks</li>
+            <li>JavaScript validates URLs before submission</li>
+        </ul>
+
+        <h3>User Instructions</h3>
+        <p>Access the bookmarking application here: 
+            <a href="TMA2/part%201/index.php" target="_blank">Bookmark App</a>
+        </p>
+
+        <h3>Database</h3>
+        <p>The database <code>bookmark_db</code> includes:</p>
+        <ul>
+            <li><code>users</code>: user credentials</li>
+            <li><code>bookmarks</code>: title, URL, and owner reference</li>
+        </ul>
+        <p>SQL setup script: <code>part1/database.sql</code></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Project 2: Learning Management System (LMS)</h2>
+        <p>This LMS enables learners to register, log in, and access interactive lessons with embedded quizzes. All learning content is authored in a custom XML-based Educational Markup Language (EML), parsed and rendered server-side using PHP.</p>
+
+        <h3>System Analysis & Design</h3>
+        <ul>
+            <li>Single-table database design (`lessons` table) with EML lesson data</li>
+            <li>All lessons are dynamically parsed and styled consistently</li>
+            <li>Quizzes are embedded in the lesson data and toggled with JavaScript</li>
+            <li>PHP parser extracts quizzes and formats them into interactive forms</li>
+            <li>JavaScript used to grade and display feedback without reloading the page</li>
+        </ul>
+
+        <h3>Educational Markup Language (EML)</h3>
+        <p>The EML format was designed for non-technical authors. It includes the following tags:</p>
+        <ul>
+            <li><code>&lt;lesson&gt;</code>: root element</li>
+            <li><code>&lt;title&gt;</code>, <code>&lt;content&gt;</code>, <code>&lt;code&gt;</code>: for instructional text</li>
+            <li><code>&lt;quiz&gt;</code>, <code>&lt;question&gt;</code>, <code>&lt;text&gt;</code>, <code>&lt;option correct="true|false"&gt;</code>: for multiple-choice assessments</li>
+        </ul>
+        <p>All content is stored as EML in the database and parsed using <code>parse_eml.php</code>.</p>
+
+        <h3>Database Design</h3>
+        <ul>
+            <li>Database name: <code>lms_db</code></li>
+            <li><code>users</code>: stores account credentials</li>
+            <li><code>lessons</code>: stores title, course, and EML content</li>
+        </ul>
+        <p>SQL setup script: <code>part2/database.sql</code></p>
+
+        <h3>Parser</h3>
+        <p>The <code>parse_eml.php</code> script converts custom EML content into valid HTML, including quiz forms with radio buttons and JavaScript integration for grading. The quiz only becomes visible when the user clicks "Take Quiz".</p>
+
+        <h3>Implementation</h3>
+        <ul>
+            <li>Users register and log in to access lessons from a dashboard</li>
+            <li>Lesson pages display parsed EML content</li>
+            <li>JavaScript toggles and grades quizzes dynamically</li>
+            <li>AJAX allows content display without full-page reloads</li>
+            <li>Responsive and consistent layout using <code>styles.css</code></li>
+        </ul>
+
+        <h3>User Instructions</h3>
+        <p>Access the LMS here: 
+            <a href="TMA2/part%202/index.php" target="_blank">Learning Management System</a>
+        </p>
+
+        <h3>Learning Content</h3>
+        <p>Three lessons are included on:</p>
+        <ul>
+            <li>HTML5: structure, semantic tags, and input types</li>
+            <li>CSS3: selectors, media queries, animations</li>
+            <li>JavaScript: variables, DOM manipulation, Ajax</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Hosting Environment</h2>
+        <h3>Local hosting using MAMPS Pro<h3>
+        <p>This project was developed and tested on macOS using <strong>MAMP PRO</strong>. Apache and MySQL were managed via MAMP’s control panel. Project files were served at <code>localhost</code> via virtual host configuration.</p>
+        <p>Web root: <code>/Applications/MAMP/htdocs/TMA2</code></p>
+
+        <h3>Publically Hosting Using Raspeberry Pi<h3>
+        <p> This project was then subsequentally hosting using a Raspberry Pi set up as a web server. Aceess was gained by obtaining a pubmic IP address then configuring router port forwarding. 
+        </p>
+        <p>Access the project here:
+            <a href="http://67.169.186.83:8888/www/tma2.htm" target="_blank">/a>
+        </p>
+    </section>
+
+    <section>
+        <h2>Reflection</h2>
+        <p>This assignment reinforced how front-end and back-end technologies interact in web development. I learned how to:</p>
+        <ul>
+            <li>Design and parse a custom XML language</li>
+            <li>Use PHP for session control, database interaction, and string processing</li>
+            <li>Use JavaScript for interactive UI and real-time quiz grading</li>
+            <li>Structure a professional, scalable web application</li>
+        </ul>
+        <p>The integration of technologies such as PHP, MySQL, XML, and AJAX provided a full-stack development experience.</p>
+    </section>
+
+</body>
+</html>
