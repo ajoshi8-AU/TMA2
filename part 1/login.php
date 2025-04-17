@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <button><a href="index.php">Home</a></button>
         <h2>Login</h2>
         <form method="post">
             <label for="email">Email:</label>

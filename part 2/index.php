@@ -15,20 +15,21 @@
     </header>
     <nav>
         <ul>
+            <li><a href="index.php">Home</a></li>
             <?php if (isset($_SESSION['user_id'])): ?>
-                <button><a href="dashboard.php">Dashboard</a></button>
-                <button><a href="logout.php">Logout</a></button>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="logout.php">Logout</a></li>
             <?php else: ?>
-                <button><a href="register.php">Register</a></button>
-                <button><a href="login.php">Login</a></button>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
             <?php endif; ?>
         </ul>
     </nav>
     <main>
         <section class="welcome">
             <h2>About This Platform</h2>
-            <p>This web application is designed to help you learn various web technologies covered in our course, including HTML5, CSS3, and JavaScript.</p>
-            <p>Here, you will find tutorials for each of these technologies, followed by quizzes to test your understanding. Our goal is to provide a user-friendly and effective learning experience.</p>
+            <p>This web application is designed to help you learn various web technologies covered in our course, including HTML5, CSS3, and JavaScript [2, 3].</p>
+            <p>Here, you will find tutorials for each of these technologies, followed by quizzes to test your understanding [3, 4]. Our goal is to provide a user-friendly and effective learning experience [5].</p>
             <h3>Getting Started</h3>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <p>You are logged in. Proceed to your <a href="dashboard.php">Dashboard</a> to access the lessons.</p>

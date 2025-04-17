@@ -1,0 +1,15 @@
+<lesson>
+    <title>Introduction to HTML5</title>
+    <content>
+        HTML5 is the latest version of HTML and provides new elements for better structure.
+    </content>
+    <quiz>
+        <question>
+            <text>What does HTML stand for?</text>
+            <option correct="false">Hyperlink Text Markup Language</option>
+            <option correct="true">HyperText Markup Language</option>
+            <option correct="false">HighText Machine Language</option>
+            <option correct="false">Hyper Transfer Markup Language</option>
+        </question>
+    </quiz>
+</lesson>

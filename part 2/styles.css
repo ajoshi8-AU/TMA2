@@ -1,0 +1,175 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+nav ul li a:hover {
+    background-color: #bbb;
+}
+
+main {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+.welcome p, .login-form p, .registration-form p, .dashboard p, .lesson-content p, .add-lesson-form p {
+    line-height: 1.6;
+}
+
+.login-form, .registration-form, .add-lesson-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form label, .registration-form label, .add-lesson-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.add-lesson-form input[type="text"],
+.add-lesson-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form button, .registration-form button, .add-lesson-form button, .quiz-button a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.login-form button:hover, .registration-form button:hover, .add-lesson-form button:hover, .quiz-button a:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ffe0e0;
+}
+
+.success {
+    color: green;
+    margin-bottom: 10px;
+    border: 1px solid green;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #e0ffe0;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    margin-bottom: 8px;
+}
+
+.dashboard ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dashboard ul li a:hover {
+    text-decoration: underline;
+}
+
+.lesson-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.lesson-content li {
+    margin-bottom: 5px;
+}
+
+.lesson-content code {
+    display: block;
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.lesson-content .important {
+    font-weight: bold;
+    color: navy;
+}
+
+.quiz-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 1em 0;
+    background-color: #ddd;
+    border-radius: 5px;
+}
